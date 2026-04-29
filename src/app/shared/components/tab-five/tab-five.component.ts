@@ -23,7 +23,7 @@ export class TabFiveComponent implements OnInit {
                Impedit ab dicta esse at ipsum voluptatibus asperiores numquam rem distinctio id!`
     },
     {
-      tabTitle: 'Sprinboot',
+      tabTitle: 'Springboot',
       frameWorkName: 'springboot',
       tabContent: `<strong>SPRINGBOOT</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero autem 
       aut reprehenderit delectus eius unde, rerum atque magnam excepturi est?`
