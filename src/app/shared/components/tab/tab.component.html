@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="header-title text-center text-white py-1 mb-3">
+        <h1 class="m-0"><strong>SKILL TAB 1</strong></h1>
+    </div>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="javascript:;" [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('html')
+        }" class="nav-link" (click)="selectedSkill = 'html'">HTML</a>
+        </li>
+        <li class="nav-item"><a href="javascript:;" [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('css')
+        }" class="nav-link" (click)="selectedSkill = 'css'">CSS</a>
+        </li>
+        <li class="nav-item"><a href="javascript:;" [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('javascript')
+        }" class="nav-link" (click)="selectedSkill = 'javascript'">Javascript</a>
+        </li>
+        <li class="nav-item"><a href="javascript:;" [ngClass]="{
+            active : selectedSkill.toLowerCase().includes('angular')
+        }" class="nav-link" (click)="selectedSkill = 'angular'">Angular</a>
+        </li>
+    </ul>
+    <hr>
+    <div class="tab-content">
+        <div class="card" *ngIf="selectedSkill.toLowerCase().includes('html')">
+            <div class="card-body">
+                <strong>HTML</strong> HTML (HyperText Markup Language) is the standard markup language
+                used to create and structure web pages. It serves as the "skeleton" or foundation of
+                almost every website on the internet, defining how content like text, images,
+                and links are displayed in a web browser.
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body" *ngIf="selectedSkill.toLowerCase().includes('css')">
+                <strong>CSS</strong> (Cascading Style Sheets) is the language used to style and
+                layout web pages. While HTML provides the structure (the "skeleton"), CSS provides
+                the visual presentation (the "look and feel")
+            </div>
+        </div>
+        <div class="card" *ngIf="selectedSkill.toLowerCase().includes('javascript')">
+            <div class="card-body">
+                <strong>JAVASCRIPT</strong> JavaScript (JS) is a high-level, interpreted programming language
+                that powers the interactivity of the modern web. Alongside HTML (structure) and CSS (style),
+                it is one of the three core technologies of the World Wide Web
+            </div>
+        </div>
+        <div class="card" *ngIf="selectedSkill.toLowerCase().includes('angular')">
+            <div class="card-body">
+                <strong>ANGULAR</strong> Angular is a popular, open-source, TypeScript-based frontend
+                framework maintained by Google for building scalable, high-performance single-page
+                applications (SPAs). It offers a component-oriented architecture, providing a full-featured
+                platform with built-in tools for routing, forms, and client-server communication
+            </div>
+        </div>
+    </div>
+</div>

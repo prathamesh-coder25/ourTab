@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="header-title text-center text-white py-1 mb-3">
+        <h1 class="m-0"><strong>SPORTS TAB 3</strong></h1>
+    </div>
+
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="javascript:;" [ngClass]="{
+            active : selectedSport.toLowerCase().includes('cricket')
+        }" class="nav-link" (click)="selectedSport = 'cricket'">CRICKET</a>
+        </li>
+        <li class="nav-item"><a href="javascript:;" [ngClass]="{
+            active : selectedSport.toLowerCase().includes('football')
+        }" class="nav-link" (click)="selectedSport = 'football'">FOOTBALL</a>
+        </li>
+        <li class="nav-item"><a href="javascript:;" [ngClass]="{
+            active : selectedSport.toLowerCase().includes('tennis')
+        }" class="nav-link" (click)="selectedSport = 'tennis'">TENNIS</a>
+        </li>
+        <li class="nav-item"><a href="javascript:;" [ngClass]="{
+            active : selectedSport.toLowerCase().includes('hockey')
+        }" class="nav-link" (click)="selectedSport = 'hockey'">HOCKEY</a>
+        </li>
+    </ul>
+    <hr>
+    <div class="tab-content">
+        <div class="card" *ngIf="selectedSport.toLowerCase().includes('cricket')">
+            <div class="card-body">
+                <strong>CRICKET</strong> Popular in countries like India, Australia, England Formats: Test, ODI, T20
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body" *ngIf="selectedSport.toLowerCase().includes('football')">
+                <strong>FOOTBALL</strong> Most popular sport worldwide Played with feet using a ball
+                Teams try to score goals Major event: FIFA World Cup
+            </div>
+        </div>
+        <div class="card" *ngIf="selectedSport.toLowerCase().includes('tennis')">
+            <div class="card-body">
+                <strong>TENNIS</strong> Played individually or in doubles
+                Uses racket and ball over a net Famous tournaments: Wimbledon, US Open
+            </div>
+        </div>
+        <div class="card" *ngIf="selectedSport.toLowerCase().includes('hockey')">
+            <div class="card-body">
+                <strong>HOCKEY</strong> Played with stick and ball on a field Two teams try to score goals
+                Very popular in India’s sports history Played in Olympics and World Cups
+            </div>
+        </div>
+    </div>
+</div>

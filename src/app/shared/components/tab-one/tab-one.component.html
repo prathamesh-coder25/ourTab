@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="header-title text-center text-white py-1 mb-3">
+  <h1 class="m-0"><strong>LLM TAB 2</strong></h1>
+</div>
+
+<ul class="nav nav-pills">
+    <li class="nav-item"><a href="javascript:;" 
+        [ngClass]="{
+            active : selectedLlm.toLowerCase().includes('chatgpt')
+        }"
+        class="nav-link"
+        (click)="selectedLlm = 'chatgpt'"
+         >ChatGPT</a>
+    </li>
+    <li class="nav-item"><a href="javascript:;"
+        [ngClass]="{
+            active : selectedLlm.toLowerCase().includes('claude')
+        }"
+        class="nav-link"
+        (click)="selectedLlm = 'claude'">CLAUDE</a>
+    </li>
+    <li class="nav-item"><a href="javascript:;"
+        [ngClass]="{
+            active : selectedLlm.toLowerCase().includes('gemini')
+        }"
+        class="nav-link"
+        (click)="selectedLlm = 'gemini'">GEMINI</a>
+    </li>
+    <li class="nav-item"><a href="javascript:;"
+        [ngClass]="{
+            active : selectedLlm.toLowerCase().includes('deepseek')
+        }"
+        class="nav-link"
+        (click)="selectedLlm = 'deepseek'">DeepSeek</a>
+    </li>
+</ul>
+<hr>
+<div class="tab-content">
+    <div class="card" *ngIf="selectedLlm.toLowerCase().includes('chatgpt')">
+        <div class="card-body">
+            <strong>ChatGPT</strong> Developed by: OpenAI
+        Strength: Balanced — coding, explanations, conversation
+        Used for: Learning, coding help, writing, problem-solving
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body" *ngIf="selectedLlm.toLowerCase().includes('claude')">
+            <strong>CLAUDE</strong> Developed by: Anthropic
+        Strength: Long documents + safer responses
+        Used for: Research, summarization, detailed writing
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedLlm.toLowerCase().includes('gemini')">
+        <div class="card-body">
+            <strong>GEMINI</strong> Developed by: Google
+        Strength: Integration with Google ecosystem
+        Used for: Search, docs, Gmail, productivity tasks
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedLlm.toLowerCase().includes('deepseek')">
+        <div class="card-body">
+            <strong>DeepSeek</strong> Developed by: DeepSeek
+    Strength: Coding + reasoning (especially math/logical tasks)
+    Used for: Programming, technical problem solving
+        </div>
+    </div>
+</div>
+</div>

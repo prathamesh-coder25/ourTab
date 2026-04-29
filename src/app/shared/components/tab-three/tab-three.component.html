@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="header-title text-center text-white py-1 mb-3">
+  <h1 class="m-0"><strong>MENSWEAR TAB 4</strong></h1>
+</div>
+
+<ul class="nav nav-pills">
+    <li class="nav-item"><a href="javascript:;" 
+        [ngClass]="{
+            active : selectedMenswear.toLowerCase().includes('formal')
+        }"
+        class="nav-link"
+        (click)="selectedMenswear = 'formal'"
+         >FORMAL</a>
+    </li>
+    <li class="nav-item"><a href="javascript:;"
+        [ngClass]="{
+            active : selectedMenswear.toLowerCase().includes('casual')
+        }"
+        class="nav-link"
+        (click)="selectedMenswear = 'casual'">CASUAL</a>
+    </li>
+    <li class="nav-item"><a href="javascript:;"
+        [ngClass]="{
+            active : selectedMenswear.toLowerCase().includes('traditional')
+        }"
+        class="nav-link"
+        (click)="selectedMenswear = 'traditional'">TRADITIONAL</a>
+    </li>
+    <li class="nav-item"><a href="javascript:;"
+        [ngClass]="{
+            active : selectedMenswear.toLowerCase().includes('sports')
+        }"
+        class="nav-link"
+        (click)="selectedMenswear = 'sports'">SPORTS</a>
+    </li>
+</ul>
+<hr>
+<div class="tab-content">
+    <div class="card" *ngIf="selectedMenswear.toLowerCase().includes('formal')">
+        <div class="card-body">
+            <strong>FORMAL</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Id maxime voluptatem quae suscipit asperiores mollitia praesentium at cupiditate neque laboriosam.
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body" *ngIf="selectedMenswear.toLowerCase().includes('casual')">
+            <strong>CASUAL</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Neque animi consequatur fugiat sed numquam id assumenda accusamus adipisci error nulla?
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedMenswear.toLowerCase().includes('traditional')">
+        <div class="card-body">
+            <strong>TRADITIONAL</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+             Id ut dolor assumenda eveniet dicta quaerat ullam, ipsum voluptatibus saepe accusantium.
+        </div>
+    </div>
+    <div class="card" *ngIf="selectedMenswear.toLowerCase().includes('sports')">
+        <div class="card-body">
+            <strong>SPORTS</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam incidunt expedita 
+            fuga alias nam labore praesentium debitis suscipit optio maiores.
+        </div>
+    </div>
+</div>
+</div>
